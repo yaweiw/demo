@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+</head>
+<body>
+
+<div>This is a single page application. Everybody can see this. The following links require authentication.</div>
+
+<div><a href="/home">Get home</a></div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
