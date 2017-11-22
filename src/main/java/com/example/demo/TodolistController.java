@@ -2,7 +2,6 @@ package com.example.demo;
 
 import com.microsoft.azure.spring.autoconfigure.aad.UserGroup;
 import com.microsoft.azure.spring.autoconfigure.aad.UserPrincipal;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -17,12 +16,12 @@ import java.util.stream.Collectors;
 public class TodolistController {
     private final List<TodoItem> todoList = new ArrayList<>();
 
-    @RequestMapping("/home")
+    @RequestMapping("/greeting")
     @PreAuthorize("hasAnyRole('ROLE_group1', 'ROLE_group2')")
     public Map<String, Object> home() {
         final Map<String, Object> model = new HashMap<>();
         model.put("id", UUID.randomUUID().toString());
-        model.put("content", "home");
+        model.put("content", "greeting");
         return model;
     }
 
